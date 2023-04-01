@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>TS projects</title>
     <link rel="stylesheet" href="./css/style.min.css">
+    <script src="https://unpkg.com/css-doodle@0.34.7/css-doodle.min.js"></script>
 </head>
 <body>
     <header class="header">
@@ -70,6 +71,35 @@
                         <button class="calculator__equal">=</button>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section class="mousemove">
+            <css-doodle class="doodle">
+                :doodle {
+                  @grid: 7 / 100vmax;
+                  background: #0a0c27;
+                }
+                @shape: clover 5;
+                background: hsla(
+                  calc(360 - @i * 4), 70%, 68%, @r.8
+                );
+                transform:
+                  scale(@r(.2, 1.5))
+                  translate(@m2.@r(±50%));
+              </css-doodle>
+            <div class="mousemove__container">
+                <div class="mousemove__block">
+                    <label id="select-level" class="mousemove__subtitle" for="select-level">Select level</label>
+                    <select class="mousemove__select">
+                        <option value="5">1</option>
+                        <option value="4">2</option>
+                        <option value="3">3</option>
+                        <option value="2">4</option>
+                        <option value="1">5</option>
+                    </select>
+                </div>
+                <img class="mousemove__yoda" src="../img/mousemove/baby-yoda.png" alt="Baby yoda">
+                <img class="mousemove__dragon" src="./img/mousemove/dragon.png" alt="Dragon">
             </div>
         </section>
     </main>
